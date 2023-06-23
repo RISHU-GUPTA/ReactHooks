@@ -3,6 +3,7 @@ import React, { useMemo, useState } from "react";
 export default function UseMemo() {
   const [number, setNumber] = useState(0);
   const [dark, setDark] = useState(false);
+  //UseCallback is same only diff it returns function (arrow function here) instead of value and can be directly used as function
   //1. now the slow function is runned only when number changes and if same it picked memoised value and return
   const doubleNumber = useMemo(() => {
     return slowfunction(number);
@@ -20,7 +21,7 @@ export default function UseMemo() {
 
   return (
     <>
-      <div>UseMemo Hook</div>
+      <h2>UseMemo Hook | UseCallback Hook</h2>
       <input
         type="number"
         value={number}
@@ -28,6 +29,7 @@ export default function UseMemo() {
       />
       <button onClick={() => setDark((e) => !e)}> Change Theme</button>
       <div style={themestyle}>{doubleNumber}</div>
+      <div className="line"></div>
     </>
   );
 }
