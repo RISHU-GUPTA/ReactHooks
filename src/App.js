@@ -8,6 +8,7 @@ import UseRef from './UseRef';
 import UseContext from './useContext/UseContext';
 import UseReducer from './UseReducer';
 import CustomHook from './CustomHooks/CustomHook';
+import UseTransition from './UseTransition';
 
 function App() {
   //Use hooks only inside function and not in any condition
@@ -16,6 +17,7 @@ function App() {
  
   return (
     <div className="App">
+      <UseTransition/>
       <CustomHook/>
       <UseReducer/>
       <UseContext/>

@@ -15,7 +15,8 @@ export default function Useeffect() {
 //Check above , if we want any cleanup code we can return that will run after destro
   return (
     <>
-    <h2>Useeffect Hook</h2>
+    <h2>Useeffect Hook | UseLayoutEffect hook</h2>
+    <pre>UseLayoutEffect works same as useEffect only diif is that this is synchronus hooks, that fires before browser repiants the th screen</pre>
     <div>
         <button onClick={()=>setResouce('posts')} >Posts</button>
         <button onClick={()=>setResouce('users')}>Users</button>
